@@ -69,10 +69,8 @@ public class NebAccount {
         return a.equals(address);
     }
 
-    public String createNewKeystore(String pwd) {
-        NebKeystore k = NebKeystore.fromPrivateKeyAndPwd(privateKey, pwd);
-        k.address = getAddress();
-        return k.getJson();
+    public String getPrivateKey() {
+        return BCUtil.bytesToHex(privateKey);
     }
 
     public String getAddress() {
@@ -84,6 +82,12 @@ public class NebAccount {
         byte[] checkSum = BCUtil.subBytes(Native.sha3256(content), 0, 4);
         content = BCUtil.bytesConcat(content, checkSum);
         return Native.base58FromData(content);
+    }
+
+    public String createNewKeystore(String pwd) {
+        NebKeystore k = NebKeystore.fromPrivateKeyAndPwd(privateKey, pwd);
+        k.address = getAddress();
+        return k.getJson();
     }
 
     public String signTransaction(NebTransaction transaction) {
