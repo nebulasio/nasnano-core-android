@@ -2,15 +2,11 @@ package io.nebulas.walletcore;
 
 import android.text.TextUtils;
 import android.util.Base64;
-import android.util.Log;
 
 import com.google.protobuf.ByteString;
 
-import java.lang.reflect.Array;
 import java.math.BigDecimal;
-import java.util.Arrays;
 
-import io.nebulas.ProtoTransaction;
 import io.nebulas.walletcore.transaction.NebBinaryData;
 import io.nebulas.walletcore.transaction.NebCallData;
 import io.nebulas.walletcore.transaction.NebDeployData;
