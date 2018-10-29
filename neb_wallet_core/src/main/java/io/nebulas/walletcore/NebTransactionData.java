@@ -20,14 +20,14 @@ import io.nebulas.walletcore.util.JsonUtil;
 
 class NebTransactionData {
 
-    public final static int ALG_SECP256K1 = 1;
+    final static int ALG_SECP256K1 = 1;
 
-    public final static String DATA_TYPE_BINARY = "binary";
-    public final static String DATA_TYPE_DEPLOY = "deploy";
-    public final static String DATA_TYPE_CALL = "call";
+    final static String DATA_TYPE_BINARY = "binary";
+    final static String DATA_TYPE_DEPLOY = "deploy";
+    final static String DATA_TYPE_CALL = "call";
 
     static class NebData {
-        public NebData(Object data) {
+        NebData(Object data) {
             if (data == null) {
                 return;
             }
@@ -45,55 +45,46 @@ class NebTransactionData {
         byte[] payload = null;
     }
 
-    public byte[] hash;
-    public byte[] from;
-    public byte[] to;
-    public byte[] value;
-    public long nonce;
-    public long timestamp;
-    public NebData data;
-    public int chainID;
-    public byte[] gasPrice;
-    public byte[] gasLimit;
-    public int alg;
-    public byte[] sign;
+    byte[] hash;
+    byte[] from;
+    byte[] to;
+    byte[] value;
+    long nonce;
+    long timestamp;
+    NebData data;
+    int chainID;
+    byte[] gasPrice;
+    byte[] gasLimit;
+    int alg;
+    byte[] sign;
 
-    public NebTransactionData() {
-    }
-
-    public NebTransactionData(NebTransaction tx) {
+    NebTransactionData(NebTransaction tx) {
         from = Native.base58ToData(tx.from);
         to = Native.base58ToData(tx.to);
-        value = BCUtil.bytesFromDecimal(tx.value);
+        value = padData(BCUtil.bytesFromDecimal(tx.value), 16);
         nonce = tx.nonce;
-//        timestamp = System.currentTimeMillis();
-        timestamp = 1540797009L;
+        timestamp = System.currentTimeMillis();
         data = new NebData(tx.data);
         chainID = tx.chainID;
-        gasPrice = BCUtil.bytesFromDecimal(tx.gasPrice);
-        gasLimit = BCUtil.bytesFromDecimal(tx.gasLimit);
+        gasPrice = padData(BCUtil.bytesFromDecimal(tx.gasPrice), 16);
+        gasLimit = padData(BCUtil.bytesFromDecimal(tx.gasLimit), 16);
         alg = ALG_SECP256K1;
 
         hash = getTxHash();
     }
 
     byte[] getTxHash() {
-        byte[][] datas = new byte[][]{
+        return Native.sha3256(new byte[][]{
                 from,
                 to,
-                padData(value, 16),
+                value,
                 padData(BCUtil.bytesFromDecimal(new BigDecimal(nonce)), 8),
                 padData(BCUtil.bytesFromDecimal(new BigDecimal(timestamp)), 8),
                 getProtoData(data),
                 padData(BCUtil.bytesFromDecimal(new BigDecimal(chainID)), 4),
-                padData(gasPrice, 16),
-                padData(gasLimit, 16)
-
-        };
-        for (byte[] bs: datas) {
-            Log.d("Neb***", Arrays.toString(bs));
-        }
-        return Native.sha3256(datas);
+                gasPrice,
+                gasLimit
+        });
     }
 
     String encode() {
@@ -118,9 +109,8 @@ class NebTransactionData {
                 .setData(dataBuilder.build());
 
 
-        byte[] data = builder.build().toByteArray(); // TODO: 2018/10/29 转化为protobuf格式数据
-        String result = Base64.encodeToString(data, 0); // TODO: 将data用base64编码
-        return result;
+        byte[] data = builder.build().toByteArray();
+        return Base64.encodeToString(data, 0).replaceAll("[\\s*\t\n\r]", "");
     }
 
     private byte[] padData(byte[] data, int len) {
@@ -130,7 +120,7 @@ class NebTransactionData {
         return result;
     }
 
-    public byte[] getProtoData(NebData data) {
+    private byte[] getProtoData(NebData data) {
         ProtoTransaction.Data.Builder dataBuilder = ProtoTransaction.Data.newBuilder();
         dataBuilder.setType(data.type);
         if (data.payload != null) {

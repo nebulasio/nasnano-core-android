@@ -9,7 +9,7 @@ public class NebTransaction {
     public BigDecimal value;
     public long nonce;
     /**
-     * NebBinaryData 或者 NebCallData 或者 NebDeployData
+     * NebBinaryData or NebCallData or NebDeployData
      */
     public Object data;
     public BigDecimal gasPrice;
