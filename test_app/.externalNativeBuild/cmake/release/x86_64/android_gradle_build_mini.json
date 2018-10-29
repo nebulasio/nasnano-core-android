@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/Users/guoping/Documents/gp/blockchain/android/GpBCLib/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/guoping/Software/dev/IDEA/android-sdk/cmake/3.6.3155560/bin/cmake --build /Users/guoping/Documents/gp/blockchain/android/GpBCLib/app/.externalNativeBuild/cmake/release/x86_64 --target clean"
+  ],
+  "libraries": {
+    "native-lib-Release-x86_64": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/guoping/Software/dev/IDEA/android-sdk/cmake/3.6.3155560/bin/cmake --build /Users/guoping/Documents/gp/blockchain/android/GpBCLib/app/.externalNativeBuild/cmake/release/x86_64 --target native-lib",
+      "abi": "x86_64",
+      "output": "/Users/guoping/Documents/gp/blockchain/android/GpBCLib/app/build/intermediates/cmake/release/obj/x86_64/libnative-lib.so"
+    }
+  }
+}

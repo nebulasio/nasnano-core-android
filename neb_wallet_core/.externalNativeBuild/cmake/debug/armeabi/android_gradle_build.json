@@ -1,0 +1,133 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/CMakeLists.txt"
+	],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"/Users/guoping/software/dev/android/android-sdk/cmake/3.6.3155560/bin/cmake --build /Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi --target clean"
+	],
+	"libraries" : 
+	{
+		"NebWalletCore-Debug-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "NebWalletCore",
+			"buildCommand" : "/Users/guoping/software/dev/android/android-sdk/cmake/3.6.3155560/bin/cmake --build /Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi --target NebWalletCore",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/jni-util.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/native-lib.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/ripemd.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/sha3.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/base58.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libsecp256k1/gp_secp256k1.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto_scrypt-hash.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/slowequals.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto-scrypt-saltgen.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto_scrypt-hexconvert.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto-mcf.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto_scrypt-check.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/b64.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/sha256.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				},
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto_scrypt-nosse.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.externalNativeBuild/cmake/debug/armeabi"
+				}
+			],
+			"output" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/build/intermediates/cmake/debug/obj/armeabi/libNebWalletCore.so",
+			"toolchain" : "17712065843053444293"
+		},
+		"secp256k1-Debug-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "secp256k1",
+			"buildType" : "debug",
+			"output" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/libs/armeabi/libSecp256k1.so",
+			"toolchain" : "17712065843053444293"
+		}
+	},
+	"toolchains" : 
+	{
+		"17712065843053444293" : 
+		{
+			"cCompilerExecutable" : "/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}
