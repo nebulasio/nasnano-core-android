@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnGo = findViewById(R.id.btnGo);
-        btnGo.setOnClickListener(view -> NormalTransactionTest());
+        btnGo.setOnClickListener(view -> NRC20TransactionTest());
     }
 
     private void AddressKeystoreTest() {
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         tx.gasPrice = new BigDecimal(1000000);
 
         String rawTransaction = account.signTransaction(tx);
-
+        Log.d("rawTransaction", rawTransaction);
         // 可以将 rawTransaction 与 WebWallet 对比 以下为WebWallet结果：
         // CiDZZcleg55QSbmXDMdPORiFp7tYyFyXDyBNn3lDVBpe9xIaGVcwVjTOPzQZ0fQrcMA3FHFbfv52gIw2A4QaGhlY4i3HZHgLxsQzGRbnaJQcDfghMxXwzEoEIhAAAAAAAAAAAAAAAAAAAAAAKAEw67/a3gU6WQoEY2FsbBJReyJGdW5jdGlvbiI6InRyYW5zZmVyIiwiQXJncyI6IltcIm4xSnZTMUxEVEpSeFNkcTRGNWNEZDF4NzhpaEhUVFJ5V2lmXCIsIFwiMFwiXSJ9QAFKEAAAAAAAAAAAAAAAAAAPQkBSEAAAAAAAAAAAAAAAAAADDUBYAWJBTftyHqbpCWOkyiEsHhmnwY0CwqfKTkp8rKBbLAqEIncjelYmk0Xo0e49lTYuNiVo9q4qw0ZoRHDnNCnK6ndj0QE=
     }

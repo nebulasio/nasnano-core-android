@@ -86,7 +86,7 @@ class NebTransactionData {
     String encode() {
         ProtoTransaction.Data.Builder dataBuilder = ProtoTransaction.Data.newBuilder();
         dataBuilder.setType(data.type);
-        if (data.payload!=null) {
+        if (data.payload != null) {
             dataBuilder.setPayload(ByteString.copyFrom(data.payload));
         }
 
