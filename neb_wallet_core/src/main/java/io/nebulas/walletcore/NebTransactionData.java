@@ -1,10 +1,16 @@
 package io.nebulas.walletcore;
 
 import android.text.TextUtils;
+import android.util.Base64;
+import android.util.Log;
+
+import com.google.protobuf.ByteString;
 
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
+import java.util.Arrays;
 
+import io.nebulas.ProtoTransaction;
 import io.nebulas.walletcore.transaction.NebBinaryData;
 import io.nebulas.walletcore.transaction.NebCallData;
 import io.nebulas.walletcore.transaction.NebDeployData;
@@ -34,6 +40,7 @@ class NebTransactionData {
             }
             payload = TextUtils.htmlEncode(JsonUtil.serialize(data)).getBytes();
         }
+
         String type = DATA_TYPE_BINARY;
         byte[] payload = null;
     }
@@ -44,7 +51,7 @@ class NebTransactionData {
     public byte[] value;
     public long nonce;
     public long timestamp;
-    public byte[] data;
+    public NebData data;
     public int chainID;
     public byte[] gasPrice;
     public byte[] gasLimit;
@@ -59,8 +66,9 @@ class NebTransactionData {
         to = Native.base58ToData(tx.to);
         value = BCUtil.bytesFromDecimal(tx.value);
         nonce = tx.nonce;
-        timestamp = System.currentTimeMillis();
-        data = bytesFromData(new NebData(tx.data));
+//        timestamp = System.currentTimeMillis();
+        timestamp = 1540797009L;
+        data = new NebData(tx.data);
         chainID = tx.chainID;
         gasPrice = BCUtil.bytesFromDecimal(tx.gasPrice);
         gasLimit = BCUtil.bytesFromDecimal(tx.gasLimit);
@@ -70,24 +78,48 @@ class NebTransactionData {
     }
 
     byte[] getTxHash() {
-        byte[][] datas = new byte[][] {
+        byte[][] datas = new byte[][]{
                 from,
                 to,
                 padData(value, 16),
                 padData(BCUtil.bytesFromDecimal(new BigDecimal(nonce)), 8),
                 padData(BCUtil.bytesFromDecimal(new BigDecimal(timestamp)), 8),
-                data,
+                getProtoData(data),
                 padData(BCUtil.bytesFromDecimal(new BigDecimal(chainID)), 4),
                 padData(gasPrice, 16),
                 padData(gasLimit, 16)
 
         };
+        for (byte[] bs: datas) {
+            Log.d("Neb***", Arrays.toString(bs));
+        }
         return Native.sha3256(datas);
     }
 
     String encode() {
-        byte[] data = null; // TODO: 2018/10/29 转化为protobuf格式数据
-        String result = null; // TODO: 将data用base64编码
+        ProtoTransaction.Data.Builder dataBuilder = ProtoTransaction.Data.newBuilder();
+        dataBuilder.setType(data.type);
+        if (data.payload!=null) {
+            dataBuilder.setPayload(ByteString.copyFrom(data.payload));
+        }
+
+        ProtoTransaction.Transaction.Builder builder = ProtoTransaction.Transaction.newBuilder();
+        builder.setChainId(this.chainID);
+        builder.setHash(ByteString.copyFrom(hash))
+                .setFrom(ByteString.copyFrom(from))
+                .setTo(ByteString.copyFrom(to))
+                .setValue(ByteString.copyFrom(value))
+                .setNonce(nonce)
+                .setTimestamp(timestamp)
+                .setGasPrice(ByteString.copyFrom(gasPrice))
+                .setGasLimit(ByteString.copyFrom(gasLimit))
+                .setAlg(alg)
+                .setSign(ByteString.copyFrom(sign))
+                .setData(dataBuilder.build());
+
+
+        byte[] data = builder.build().toByteArray(); // TODO: 2018/10/29 转化为protobuf格式数据
+        String result = Base64.encodeToString(data, 0); // TODO: 将data用base64编码
         return result;
     }
 
@@ -98,9 +130,13 @@ class NebTransactionData {
         return result;
     }
 
-    private byte[] bytesFromData(NebData data) {
-        // TODO: 2018/10/29 将data转化为protobuf格式数据 并返回
-        return null;
+    public byte[] getProtoData(NebData data) {
+        ProtoTransaction.Data.Builder dataBuilder = ProtoTransaction.Data.newBuilder();
+        dataBuilder.setType(data.type);
+        if (data.payload != null) {
+            dataBuilder.setPayload(ByteString.copyFrom(data.payload));
+        }
+        return dataBuilder.build().toByteArray();
     }
 
 }

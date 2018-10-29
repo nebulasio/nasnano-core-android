@@ -3,7 +3,10 @@ package io.nebulas.test;
 import android.accounts.Account;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import java.math.BigDecimal;
 
@@ -13,10 +16,15 @@ import io.nebulas.walletcore.transaction.NebCallData;
 import io.nebulas.walletcore.transaction.NebTransaction;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button btnGo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btnGo = findViewById(R.id.btnGo);
+        btnGo.setOnClickListener(view -> NormalTransactionTest());
     }
 
     private void AddressKeystoreTest() {
@@ -30,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void NormalTransactionTest() {
+
+        String nebulas = "Nebulas.io";
+        Log.d("Main", Base64.encodeToString(nebulas.getBytes(), 0));
+
         NebAccount account = new NebAccount("5876489b63d456e3c82b043d235b46f76d4503b613230ed47d10bc4921e22f6a");
 
         NebTransaction tx = new NebTransaction();
@@ -37,15 +49,16 @@ public class MainActivity extends AppCompatActivity {
         tx.from = account.getAddress();
         tx.to = account.getAddress();
         tx.value = new BigDecimal(0);
-        tx.data = null; // new NebBinaryData("test");
+        tx.data = null;//new NebBinaryData("test");
         tx.nonce = 1;
         tx.gasLimit = new BigDecimal(2000000);
         tx.gasPrice = new BigDecimal(1000000);
 
         String rawTransaction = account.signTransaction(tx);
-
+        Log.d("rawTransaction", rawTransaction);
         // 可以将 rawTransaction 与 WebWallet 对比 以下为WebWallet结果：
         // CiA+fHNvmgi0rUcHlxRYn1T4fdG5QdZH2jLBmR+0IeJq0xIaGVcwVjTOPzQZ0fQrcMA3FHFbfv52gIw2A4QaGhlXMFY0zj80GdH0K3DANxRxW37+doCMNgOEIhAAAAAAAAAAAAAAAAAAAAAAKAEw/b3a3gU6CAoGYmluYXJ5QAFKEAAAAAAAAAAAAAAAAAAPQkBSEAAAAAAAAAAAAAAAAAADDUBYAWJBbhAgKt5OqNtxw6chgGqrnkYnJnsCQj8lKSxd9XZG3tJ0oiGETnawshDJI+75bC0U6IMdZcZcmdUinGfdxK4QwAE=
+
     }
 
     private void NRC20TransactionTest() {
