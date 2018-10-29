@@ -15,44 +15,44 @@ class NebKeystore {
     private static final int VERSION_CURRENT = 4;
 
     static class NebKeystoreCipherParams {
-        public String iv;
+        String iv;
     }
 
     static class NebKeystoreKdfParams {
-        public int dklen;
-        public String salt;
-        public int n;
-        public int r;
-        public int p;
-        public int c;
-        public String prf;
+        int dklen;
+        String salt;
+        int n;
+        int r;
+        int p;
+        int c;
+        String prf;
     }
 
     static class NebKeystoreCrypto {
-        public String cipher;
-        public String ciphertext;
-        public NebKeystoreCipherParams cipherparams;
-        public String kdf;
-        public NebKeystoreKdfParams kdfparams;
-        public String mac;
-        public String machash = "sha3256";
+        String cipher;
+        String ciphertext;
+        NebKeystoreCipherParams cipherparams;
+        String kdf;
+        NebKeystoreKdfParams kdfparams;
+        String mac;
+        String machash = "sha3256";
 
-        public boolean isScrypt() {
+        boolean isScrypt() {
             return kdf.toLowerCase().equals("scrypt");
         }
     }
 
-    public int version;
-    public String id;
-    public String address;
-    public NebKeystoreCrypto crypto;
+    int version;
+    String id;
+    String address;
+    NebKeystoreCrypto crypto;
 
-    public static NebKeystore fromJson(String json) {
+    static NebKeystore fromJson(String json) {
         // TODO: 2018/10/28 用 JSONObject 替换 Gson 可以减少sdk依赖
         return JsonUtil.deserialize(json, NebKeystore.class);
     }
 
-    public static NebKeystore fromPrivateKeyAndPwd(byte[] privateKey, String pwd) {
+    static NebKeystore fromPrivateKeyAndPwd(byte[] privateKey, String pwd) {
         NebKeystore keystore = new NebKeystore();
         keystore.id = UUID.randomUUID().toString();
         keystore.version = VERSION_CURRENT;
@@ -62,10 +62,6 @@ class NebKeystore {
         NebKeystoreKdfParams kdfparams = new NebKeystoreKdfParams();
         kdfparams.salt = BCUtil.bytesToHex(BCUtil.randomBytes(32));
         kdfparams.dklen = 32;
-
-//        crypto.kdf = "pbkdf2";
-//        kdfparams.prf = "hmac-sha256";
-//        kdfparams.c = 262144;
 
         crypto.kdf = "script";
         kdfparams.n = 4096;
@@ -96,12 +92,12 @@ class NebKeystore {
         return keystore;
     }
 
-    public String getJson() {
+    String getJson() {
         // TODO: 2018/10/28 用 JSONObject 替换 Gson 可以减少sdk依赖
         return JsonUtil.serialize(this);
     }
 
-    public byte[] getPrivateKeyWithPwd(String pwd) {
+    byte[] getPrivateKeyWithPwd(String pwd) {
         if (!check()) {
             return null;
         }
@@ -127,18 +123,15 @@ class NebKeystore {
         return r;
     }
 
-    public boolean check() {
-        if (this.crypto == null ||
+    boolean check() {
+        return !(this.crypto == null ||
                 TextUtils.isEmpty(this.crypto.kdf) ||
                 this.crypto.kdfparams == null ||
                 (this.crypto.isScrypt() && !TextUtils.isEmpty(this.crypto.kdfparams.prf) && !this.crypto.kdfparams.prf.equals("hmac-sha256")) ||
                 TextUtils.isEmpty(this.crypto.mac) ||
                 TextUtils.isEmpty(this.crypto.cipher) ||
                 TextUtils.isEmpty(this.crypto.ciphertext) ||
-                this.crypto.cipherparams == null) {
-            return false;
-        }
-        return true;
+                this.crypto.cipherparams == null);
     }
 
     private byte[] getDerivedKeyWithPwd(String pwd) {

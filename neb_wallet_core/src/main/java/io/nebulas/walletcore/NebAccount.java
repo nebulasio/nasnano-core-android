@@ -17,21 +17,21 @@ public class NebAccount {
         this.privateKey = BCUtil.randomBytes(32);
     }
 
-    public NebAccount(String privateKey) {
+    public NebAccount(String privateKey) throws IllegalArgumentException {
         this.privateKey = BCUtil.bytesFromHex(privateKey);
         if (this.privateKey.length != 32) {
-            throw new RuntimeException("privateKey error");
+            throw new IllegalArgumentException("privateKey error");
         }
     }
 
-    public NebAccount(String keystore, String pwd) {
+    public NebAccount(String keystore, String pwd) throws IllegalArgumentException {
         NebKeystore k = NebKeystore.fromJson(keystore);
         if (!k.check()) {
-            throw new RuntimeException("keystore error");
+            throw new IllegalArgumentException("keystore error");
         }
         this.privateKey = k.getPrivateKeyWithPwd(pwd);
         if (this.privateKey == null) {
-            throw new RuntimeException("pwd error");
+            throw new IllegalArgumentException("pwd error");
         }
     }
 
