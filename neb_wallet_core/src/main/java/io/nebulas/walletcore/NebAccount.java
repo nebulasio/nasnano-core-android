@@ -1,5 +1,9 @@
 package io.nebulas.walletcore;
 
+import io.nebulas.walletcore.exceptions.IllegalKeystoreException;
+import io.nebulas.walletcore.exceptions.IllegalPrivateKeyException;
+import io.nebulas.walletcore.exceptions.NebulasException;
+import io.nebulas.walletcore.exceptions.WrongPasswordException;
 import io.nebulas.walletcore.transaction.NebTransaction;
 import io.nebulas.walletcore.util.BCUtil;
 import io.nebulas.walletcore.util.Callback;
@@ -17,21 +21,26 @@ public class NebAccount {
         this.privateKey = BCUtil.randomBytes(32);
     }
 
-    public NebAccount(String privateKey) throws IllegalArgumentException {
+    public NebAccount(String privateKey) throws NebulasException {
         this.privateKey = BCUtil.bytesFromHex(privateKey);
         if (this.privateKey.length != 32) {
-            throw new IllegalArgumentException("privateKey error");
+            throw new IllegalPrivateKeyException();
         }
     }
 
-    public NebAccount(String keystore, String pwd) throws IllegalArgumentException {
-        NebKeystore k = NebKeystore.fromJson(keystore);
-        if (!k.check()) {
-            throw new IllegalArgumentException("keystore error");
+    public NebAccount(String keystore, String pwd) throws NebulasException {
+        NebKeystore k = null;
+        try {
+            k = NebKeystore.fromJson(keystore);
+        } catch (Exception e) {
+            throw new IllegalKeystoreException();
+        }
+        if (k==null || !k.check()) {
+            throw new IllegalKeystoreException();
         }
         this.privateKey = k.getPrivateKeyWithPwd(pwd);
         if (this.privateKey == null) {
-            throw new IllegalArgumentException("pwd error");
+            throw new WrongPasswordException();
         }
     }
 
@@ -51,7 +60,7 @@ public class NebAccount {
 
     private Secp256k1Signature sign(byte[] hash32) {
         byte[] sigData = new byte[65];
-        if(!Native.sign(hash32, this.privateKey, sigData)) {
+        if (!Native.sign(hash32, this.privateKey, sigData)) {
             return null;
         }
         return new Secp256k1Signature(sigData);
