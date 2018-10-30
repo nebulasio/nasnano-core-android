@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("ACCOUNT", "keystore: " + account.createNewKeystore("abc123"));
         } catch (NebulasException e) {
             e.printStackTrace();
+            Log.d("ACCOUNT", "Error: " + e.getMessage());
         }
 
 //        account = new NebAccount("{\"address\":\"n1JvS1LDTJRxSdq4F5cDd1x78ihHTTRyWif\",\"crypto\":{\"cipher\":\"aes-128-ctr\",\"ciphertext\":\"4cec1d9cd72faff4c605a3f96aa91cc17d63b8fe072b7bc27f58a0b54180becf\",\"cipherparams\":{\"iv\":\"b25314e2ed860c5d842e903049f26312\"},\"kdf\":\"scrypt\",\"kdfparams\":{\"dklen\":32,\"n\":4096,\"p\":1,\"r\":8,\"salt\":\"147248403048d5e59db5ed0dd0f3512a2a0cddc8bacd81b5c63a62fe3242cb32\"},\"mac\":\"e825044154cf0fbf2f3e84f0fe81bfae0eb7b9437d066bbb145260fb26ddb725\",\"machash\":\"sha3256\"},\"id\":\"a1c01502-9c7e-4a4a-aa45-0b66c85cd93d\",\"version\":4}", "111111");
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("ACCOUNT", "address1: " + account.getAddress());
         } catch (NebulasException e) {
             e.printStackTrace();
+            Log.d("ACCOUNT", "Error: " + e.getMessage());
         }
     }
 

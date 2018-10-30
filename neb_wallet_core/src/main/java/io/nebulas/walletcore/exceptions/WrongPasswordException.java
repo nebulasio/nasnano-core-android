@@ -1,8 +1,7 @@
 package io.nebulas.walletcore.exceptions;
 
 public class WrongPasswordException extends NebulasException {
-    @Override
-    public String getMessage() {
-        return "密码错误";
+    public WrongPasswordException() {
+        super(ErrorOverview.WrongPassword.errorCode, ErrorOverview.WrongPassword.errorMessage);
     }
 }
