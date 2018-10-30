@@ -1,20 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnGo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="18dp">
 
-</android.support.constraint.ConstraintLayout>
+                <Button
+                        android:id="@+id/btn_to_create_neo_wallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="创建NEO钱包" />
+
+                <Button
+                        android:id="@+id/btn_to_create_nas_wallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="创建NAS钱包" />
+
+                <Button
+                        android:id="@+id/btn_to_import_nas_wallet_by_pk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="私钥导入NAS钱包" />
+
+                <Button
+                        android:id="@+id/btn_to_import_nas_wallet_by_keystore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Keystore导入NAS钱包" />
+
+                <Button
+                        android:id="@+id/btn_to_get_raw_transaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="普通NAS转账签名" />
+
+                <Button
+                        android:id="@+id/btn_to_get_nrc20_raw_transaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NRC20交易签名" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:text="测试结果️"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_result"
+                        android:layout_marginTop="12dp"
+                        android:padding="12dp"
+                        android:textColor="#666666"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:hint="Result Here"/>
+        </LinearLayout>
+</ScrollView>
