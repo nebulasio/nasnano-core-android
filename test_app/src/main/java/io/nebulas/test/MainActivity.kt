@@ -20,6 +20,8 @@ import java.util.concurrent.Executors
 class MainActivity : AppCompatActivity() {
 
     private val tag = "WalletResult"
+    private val chainIdMainNet = 1
+    private val chainIdTestNet = 1001
 
     private val testPrivateKey = "99856337acfae923d0d49baad077a45bc110154cb3b9775f611f2d2b6c87d818"
     private val testKeystore = "{\"address\":\"n1NU4imP3aD6NcQVEBPpZ53WGHkAfGoCsh5\",\"crypto\":{\"cipher\":\"aes-128-ctr\",\"cipherparams\":{\"iv\":\"9eb86cec915f9c9df5a6d225cdf4485d\"},\"ciphertext\":\"dbc4ba7741e6b21279c26a6fbee9e86e1e4ccf673e041e48bbe2d40661f7464ff6d2bd43a16c341491bb94092fb2ba12\",\"kdf\":\"script\",\"kdfparams\":{\"c\":0,\"dklen\":32,\"n\":4096,\"p\":1,\"r\":8,\"salt\":\"2cf28fecd199600036156721d7bfcd8eb40fc9edc3d08ae44e173c055c6314c6\"},\"mac\":\"8acbf2d441bab3c9bbabfa32b2f1ebee4ab1b87ad6e6920d3f04938334d8e0a0\",\"machash\":\"sha3256\"},\"id\":\"a9d4874e-7024-4e8d-b487-f3edef7d9865\",\"version\":4}"
@@ -65,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         executor.submit {
             try {
                 val nasWallet = NebAccount(testPrivateKey)
-                updateResult("Imported(PK) NAS Wallet Address: \n\n${nasWallet.address}")
+                updateResult("Imported(PK) NAS Wallet - Address: \n\n${nasWallet.address}")
             } catch (e: NebulasException) {
                 when(e){
                     is IllegalPrivateKeyException -> {
@@ -79,7 +81,7 @@ class MainActivity : AppCompatActivity() {
                         //do something when password is wrong
                     }
                 }
-                updateResult("Imported(PK) NAS Wallet Error: \n\n${e.errorCode} - ${e.message}")
+                updateResult("Import(PK) NAS Wallet - Error: \n\n${e.errorCode} - ${e.message}")
             }
         }
     }
@@ -88,7 +90,7 @@ class MainActivity : AppCompatActivity() {
         executor.submit {
             try {
                 val nasWallet = NebAccount(testKeystore, testPassword)
-                updateResult("Imported(Keystore) NAS Wallet Address: \n\n${nasWallet.address}")
+                updateResult("Imported(Keystore) NAS Wallet - Address: \n\n${nasWallet.address}")
             } catch (e: NebulasException) {
                 when(e){
                     is IllegalPrivateKeyException -> {
@@ -103,7 +105,7 @@ class MainActivity : AppCompatActivity() {
                         //do something when password is wrong
                     }
                 }
-                updateResult("Imported(Keystore) NAS Wallet Error: \n\n${e.errorCode} - ${e.message}")
+                updateResult("Import(Keystore) NAS Wallet - Error: \n\n${e.errorCode} - ${e.message}")
             }
         }
     }
@@ -119,7 +121,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             val tx = NebTransaction()
-            tx.chainID = 1001
+            tx.chainID = chainIdTestNet
             tx.from = account.address
             tx.to = account.address
             tx.value = BigDecimal("0")
@@ -151,7 +153,7 @@ class MainActivity : AppCompatActivity() {
             data.Args = "[\"" + account.address + "\", \"0\"]"
 
             val tx = NebTransaction()
-            tx.chainID = 1
+            tx.chainID = chainIdTestNet
             tx.from = account.address
             tx.to = "n1zUNqeBPvsyrw5zxp9mKcDdLTjuaEL7s39" // ATP合约地址
             tx.value = BigDecimal("0")
