@@ -35,12 +35,15 @@ public class NebAccount {
         } catch (Exception e) {
             throw new IllegalKeystoreException();
         }
-        if (k==null || !k.check()) {
+        if (k == null || !k.check()) {
             throw new IllegalKeystoreException();
         }
         this.privateKey = k.getPrivateKeyWithPwd(pwd);
         if (this.privateKey == null) {
             throw new WrongPasswordException();
+        }
+        if (this.privateKey.length > 32) {
+            this.privateKey = BCUtil.subBytes(this.privateKey, 0, 32);
         }
     }
 
