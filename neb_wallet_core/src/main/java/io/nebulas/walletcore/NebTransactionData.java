@@ -59,7 +59,7 @@ class NebTransactionData {
         to = Native.base58ToData(tx.to);
         value = padData(BCUtil.bytesFromDecimal(tx.value), 16);
         nonce = tx.nonce;
-        timestamp = System.currentTimeMillis();
+        timestamp = System.currentTimeMillis() / 1000;
         data = new NebData(tx.data);
         chainID = tx.chainID;
         gasPrice = padData(BCUtil.bytesFromDecimal(tx.gasPrice), 16);
