@@ -58,8 +58,27 @@ class MainActivity : AppCompatActivity() {
 
     private fun createNasWallet() {
         executor.submit {
-            val nasWallet = NebAccount()
-            updateResult("NAS Wallet Address: \n\n${nasWallet.address}")
+            var nasWallet = NebAccount()
+            var privateKey = nasWallet.privateKey
+            var keystore = nasWallet.createNewKeystore("123456")
+            Log.d(tag, "PK: $privateKey")
+            Log.d(tag, "KS: $keystore")
+
+            nasWallet = NebAccount(keystore, "123456")
+            keystore = nasWallet.createNewKeystore("123456")
+            privateKey = nasWallet.privateKey
+            updateResult("""
+                NAS Wallet
+
+                Private Key:
+                $privateKey
+
+                Address:
+                ${nasWallet.address}
+
+                keystore:
+                $keystore
+                """.trimIndent())
         }
     }
 
