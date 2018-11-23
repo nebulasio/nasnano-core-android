@@ -34,7 +34,7 @@ class NebTransactionData {
             } else if (data.getClass() == NebCallData.class) {
                 type = DATA_TYPE_CALL;
             }
-            payload = TextUtils.htmlEncode(JsonUtil.serialize(data)).getBytes();
+            payload = JsonUtil.serialize(data).getBytes();
         }
 
         String type = DATA_TYPE_BINARY;

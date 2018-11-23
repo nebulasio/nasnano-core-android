@@ -13,6 +13,7 @@ import java.lang.reflect.Type;
 public class JsonUtil {
 
     private static Gson sGson = new GsonBuilder()
+            .disableHtmlEscaping()
             .excludeFieldsWithModifiers(Modifier.PRIVATE, Modifier.PROTECTED, Modifier.STATIC)
             .create();
 
