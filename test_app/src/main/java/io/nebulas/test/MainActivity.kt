@@ -13,7 +13,7 @@ import io.nebulas.walletcore.exceptions.WrongPasswordException
 import io.nebulas.walletcore.transaction.NebCallData
 import io.nebulas.walletcore.transaction.NebTransaction
 import kotlinx.android.synthetic.main.activity_main.*
-import neoutils.Neoutils
+//import neoutils.Neoutils
 import java.math.BigDecimal
 import java.util.concurrent.Executors
 
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private val chainIdMainNet = 1
     private val chainIdTestNet = 1001
 
-    private val testPrivateKey = "99856337acfae923d0d49baad077a45bc110154cb3b9775f611f2d2b6c87d818"
+    private val testPrivateKey = "5876489b63d456e3c82b043d235b46f76d4503b613230ed47d10bc4921e22f6a"
     private val testKeystore = "{\"address\":\"n1NU4imP3aD6NcQVEBPpZ53WGHkAfGoCsh5\",\"crypto\":{\"cipher\":\"aes-128-ctr\",\"cipherparams\":{\"iv\":\"9eb86cec915f9c9df5a6d225cdf4485d\"},\"ciphertext\":\"dbc4ba7741e6b21279c26a6fbee9e86e1e4ccf673e041e48bbe2d40661f7464ff6d2bd43a16c341491bb94092fb2ba12\",\"kdf\":\"script\",\"kdfparams\":{\"c\":0,\"dklen\":32,\"n\":4096,\"p\":1,\"r\":8,\"salt\":\"2cf28fecd199600036156721d7bfcd8eb40fc9edc3d08ae44e173c055c6314c6\"},\"mac\":\"8acbf2d441bab3c9bbabfa32b2f1ebee4ab1b87ad6e6920d3f04938334d8e0a0\",\"machash\":\"sha3256\"},\"id\":\"a9d4874e-7024-4e8d-b487-f3edef7d9865\",\"version\":4}"
     private val testPassword = "abc123"
 
@@ -50,10 +50,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createNeoWallet() {
-        executor.submit {
-            val neoWallet = Neoutils.newWallet()
-            updateResult("NEO Wallet Address: \n\n${neoWallet.address}")
-        }
+//        executor.submit {
+//            val neoWallet = Neoutils.newWallet()
+//            updateResult("NEO Wallet Address: \n\n${neoWallet.address}")
+//        }
     }
 
     private fun createNasWallet() {
@@ -174,7 +174,7 @@ class MainActivity : AppCompatActivity() {
             val tx = NebTransaction()
             tx.chainID = chainIdTestNet
             tx.from = account.address
-            tx.to = "n1zUNqeBPvsyrw5zxp9mKcDdLTjuaEL7s39" // ATP合约地址
+            tx.to = "n1nkoSJVLQnaKnDKH56mtKtdjbgLKoHZhtD" // ATP合约地址
             tx.value = BigDecimal("0")
             tx.data = data
             tx.nonce = 1
