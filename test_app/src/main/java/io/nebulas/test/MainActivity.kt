@@ -116,11 +116,11 @@ class MainActivity : AppCompatActivity() {
                         //do something when illegal private key
                     }
                     is IllegalKeystoreException -> {
-                        //通过私钥导入钱包（即：NebAccount(keystore, password)构造方法），可能会抛出: IllegalKeystoreException、WrongPasswordException
+                        //通过Keystore导入钱包（即：NebAccount(keystore, password)构造方法），可能会抛出: IllegalKeystoreException、WrongPasswordException
                         //do something when illegal keystore
                     }
                     is WrongPasswordException -> {
-                        //通过私钥导入钱包（即：NebAccount(keystore, password)构造方法），可能会抛出: IllegalKeystoreException、WrongPasswordException
+                        //通过Keystore导入钱包（即：NebAccount(keystore, password)构造方法），可能会抛出: IllegalKeystoreException、WrongPasswordException
                         //do something when password is wrong
                     }
                 }
