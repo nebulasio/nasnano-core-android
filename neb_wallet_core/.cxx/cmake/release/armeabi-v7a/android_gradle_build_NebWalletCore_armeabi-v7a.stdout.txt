@@ -1,0 +1,20 @@
+[1/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/jni-util.c.o
+[2/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/native-lib.c.o
+[3/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/ripemd.c.o
+[4/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/sha3.c.o
+[5/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/base58.c.o
+[6/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libsecp256k1/gp_secp256k1.c.o
+[7/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto_scrypt-hash.c.o
+[8/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/slowequals.c.o
+[9/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto-scrypt-saltgen.c.o
+[10/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto_scrypt-hexconvert.c.o
+[11/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto-mcf.c.o
+[12/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto_scrypt-check.c.o
+[13/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/b64.c.o
+[14/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/sha256.c.o
+[15/16] Building C object CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto_scrypt-nosse.c.o
+/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/native-lib.c:141:14: warning: initializing 'uint8_t *' (aka 'unsigned char *') with an expression of type 'const uint8_t *' (aka 'const unsigned char *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    uint8_t *hash = sha3_Finalize(&c);
+             ^      ~~~~~~~~~~~~~~~~~
+1 warning generated.
+[16/16] Linking C shared library ../../../../build/intermediates/cmake/release/obj/armeabi-v7a/libNebWalletCore.so

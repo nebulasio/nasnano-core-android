@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/guoping/software/dev/android/android-sdk/cmake/3.6.4111459/bin/cmake --build /Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "secp256k1-Release-armeabi-v7a": {
+      "artifactName": "secp256k1",
+      "abi": "armeabi-v7a",
+      "output": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/libs/armeabi-v7a/libSecp256k1.so"
+    },
+    "NebWalletCore-Release-armeabi-v7a": {
+      "artifactName": "NebWalletCore",
+      "buildCommand": "/Users/guoping/software/dev/android/android-sdk/cmake/3.6.4111459/bin/cmake --build /Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/armeabi-v7a --target NebWalletCore",
+      "abi": "armeabi-v7a",
+      "output": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/build/intermediates/cmake/release/obj/armeabi-v7a/libNebWalletCore.so"
+    }
+  }
+}

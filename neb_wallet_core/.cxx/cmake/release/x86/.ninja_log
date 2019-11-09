@@ -1,0 +1,17 @@
+# ninja log v5
+1	74	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto_scrypt-hash.c.o	998d455f2c54e3a0
+2	77	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto-mcf.c.o	708c8c3dacd20f39
+2	77	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto_scrypt-hexconvert.c.o	efa85e111237763b
+1	85	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/slowequals.c.o	414f650e94049145
+2	96	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto-scrypt-saltgen.c.o	d6418decbaea25c8
+3	96	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto_scrypt-check.c.o	b7bbbce0f844e04c
+0	102	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/jni-util.c.o	e2c7a6701a38b7c0
+1	118	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libsecp256k1/gp_secp256k1.c.o	18920036437d73d4
+3	126	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/b64.c.o	d8e5fadd2d65f34a
+1	139	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/base58.c.o	5f9a9331c37c1921
+0	141	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/native-lib.c.o	db72b9feea323162
+0	148	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/sha3.c.o	52ac42f91a9133bd
+75	267	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/crypto_scrypt-nosse.c.o	490f94b2c505d9b4
+0	348	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/ripemd.c.o	38476e48843f0093
+3	512	0	CMakeFiles/NebWalletCore.dir/src/main/cpp/libs/libscrypt/sha256.c.o	cdf76e04669b825f
+512	536	0	../../../../build/intermediates/cmake/release/obj/x86/libNebWalletCore.so	d769a4c10cf47d98

@@ -1,0 +1,133 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/CMakeLists.txt"
+	],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"/Users/guoping/software/dev/android/android-sdk/cmake/3.6.4111459/bin/cmake --build /Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a --target clean"
+	],
+	"libraries" : 
+	{
+		"NebWalletCore-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "NebWalletCore",
+			"buildCommand" : "/Users/guoping/software/dev/android/android-sdk/cmake/3.6.4111459/bin/cmake --build /Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a --target NebWalletCore",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/jni-util.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/native-lib.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/ripemd.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/sha3.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/base58.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libsecp256k1/gp_secp256k1.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto_scrypt-hash.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/slowequals.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto-scrypt-saltgen.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto_scrypt-hexconvert.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto-mcf.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto_scrypt-check.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/b64.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/sha256.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/guoping/software/dev/android/android-ndk-r16b/sysroot -DNebWalletCore_EXPORTS -I../../../../src/main/cpp  -isystem /Users/guoping/software/dev/android/android-ndk-r16b/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/src/main/cpp/libs/libscrypt/crypto_scrypt-nosse.c",
+					"workingDirectory" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/arm64-v8a"
+				}
+			],
+			"output" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/build/intermediates/cmake/release/obj/arm64-v8a/libNebWalletCore.so",
+			"toolchain" : "17712065843053444293"
+		},
+		"secp256k1-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "secp256k1",
+			"buildType" : "release",
+			"output" : "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/libs/arm64-v8a/libSecp256k1.so",
+			"toolchain" : "17712065843053444293"
+		}
+	},
+	"toolchains" : 
+	{
+		"17712065843053444293" : 
+		{
+			"cCompilerExecutable" : "/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/guoping/software/dev/android/android-ndk-r16b/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

@@ -1,0 +1,3 @@
+/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/debug/arm64-v8a/CMakeFiles/NebWalletCore.dir

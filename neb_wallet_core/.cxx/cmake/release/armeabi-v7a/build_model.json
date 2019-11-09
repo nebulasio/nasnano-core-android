@@ -1,0 +1,75 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core",
+      "sdkFolder": "/Users/guoping/software/dev/android/android-sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/build/intermediates",
+      "gradleModulePathName": ":neb_wallet_core",
+      "moduleRootFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core",
+      "makeFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/.cxx",
+      "cxxFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx",
+      "ndkFolder": "/Users/guoping/software/dev/android/android-ndk-r16b",
+      "ndkVersion": "16.1.4479499",
+      "ndkSupportedAbiList": [
+        "ARMEABI",
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "MIPS",
+        "MIPS64",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [
+      ""
+    ],
+    "variantName": "release",
+    "soFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/build/intermediates/cmake/release/lib",
+    "objFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/build/intermediates/cmake/release/obj",
+    "jsonFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release",
+    "gradleBuildOutputFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cxx/release",
+    "isDebuggableEnabled": false,
+    "validAbiList": [
+      "ARMEABI",
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "ARMEABI_V7A",
+  "abiPlatformVersion": 14,
+  "cxxBuildFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/armeabi-v7a",
+  "jsonFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/armeabi-v7a/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cxx/release/armeabi-v7a",
+  "objFolder": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/build/intermediates/cmake/release/obj/armeabi-v7a",
+  "buildCommandFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/armeabi-v7a/build_command.txt",
+  "buildOutputFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/armeabi-v7a/build_output.txt",
+  "modelOutputFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/armeabi-v7a/build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cxx/release/armeabi-v7a/CMakeLists.txt",
+    "toolchainWrapperFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cxx/release/armeabi-v7a/android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cxx/release/armeabi-v7a/build_generation_state.json",
+    "cacheKeyFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cxx/release/armeabi-v7a/compiler_cache_key.json",
+    "compilerCacheUseFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cxx/release/armeabi-v7a/compiler_cache_use.json",
+    "compilerCacheWriteFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cxx/release/armeabi-v7a/compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cxx/release/armeabi-v7a/compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/armeabi-v7a/json_generation_record.json",
+  "compileCommandsJsonFile": "/Users/guoping/Documents/nebulas/android/android_wallet_core/neb_wallet_core/.cxx/cmake/release/armeabi-v7a/compile_commands.json"
+}
